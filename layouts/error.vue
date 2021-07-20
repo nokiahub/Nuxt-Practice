@@ -1,11 +1,9 @@
 <template>
-  <div>my items page</div>
+  <div class="container">page not found</div>
 </template>
 
 <script>
-export default {
-  layout: "no-nav"
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
