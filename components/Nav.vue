@@ -37,4 +37,11 @@ export default {};
 </script>
 
 <style scoped>
+.padding {
+  padding: 1.5rem;
+  background-color: black;
+}
+.nav-left {
+  margin-left: auto;
+}
 </style>
