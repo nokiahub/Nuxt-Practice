@@ -15,6 +15,16 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    mode: "history",
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: "item",
+        path: "/products/:id?",
+        component: "pages/products/_id.vue",
+      })
+    },
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [

@@ -1,14 +1,24 @@
 <template>
-  <NuxtLink :to="`/products/${card.id}`" class="card">
+  <!-- <NuxtLink :to="`/products/${card.id}`" class="card">
     <img :src="require(`@/assets/images/${card.image || 'fe1.jpeg'}`)" alt class="image" />
     <h3 class="header">{{card.title}}</h3>
     <p class="snippet">{{card.snippet}}</p>
-  </NuxtLink>
+  </NuxtLink> -->
+  <div @click="handleRedirect" class="card">
+    <img :src="require(`@/assets/images/${card.image || 'fe1.jpeg'}`)" alt class="image" />
+    <h3 class="header">{{card.title}}</h3>
+    <p class="snippet">{{card.snippet}}</p>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ["card"]
+  props: ["card"],
+  methods: {
+    handleRedirect() {
+      this.$router.push({ name: "item", params: { id: this.card.id}})
+    }
+  }
 };
 </script>
 
