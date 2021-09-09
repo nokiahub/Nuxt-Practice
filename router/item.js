@@ -1,7 +1,7 @@
 const routes = [
   {
     name: "item",
-        path: "/products-diff/:id?",
+        path: "/products/:id?",
         component: "pages/products/_id.vue",
   }
 ]
