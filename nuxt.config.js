@@ -24,7 +24,7 @@ export default {
         ...routes.map((route) => {
           return {
             ...route,
-            component: resolve(__dirname, route.component),
+            component: route.component,
           }
         })
       )
