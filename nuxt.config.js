@@ -1,3 +1,5 @@
+import routes from "./router"
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -17,12 +19,15 @@ export default {
   },
   router: {
     mode: "history",
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: "item",
-        path: "/products-diff/:id?",
-        component: "pages/products/_id.vue",
-      })
+    extendRoutes(nuxtRoutes, resolve) {
+      nuxtRoutes.push(
+        ...routes.map((route) => {
+          return {
+            ...route,
+            component: resolve(__dirname, route.component),
+          }
+        })
+      )
     },
   },
 
