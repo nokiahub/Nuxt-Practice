@@ -20,7 +20,7 @@ export default {
     extendRoutes(routes, resolve) {
       routes.push({
         name: "item",
-        path: "/products/:id?",
+        path: "/products-diff/:id?",
         component: "pages/products/_id.vue",
       })
     },
