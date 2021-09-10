@@ -1,5 +1,6 @@
 import routes from "./router"
-
+import en from "./locales/en.json"
+import ko from "./locales/ko.json"
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
