@@ -55,5 +55,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  i18n: {
+    locales: ["ko", "en"],
+    defaultLocale: "ko",
+    vueI18n: {
+      fallbackLocale: "en",
+      messages: {
+        en,
+        ko,
+      },
+    },
+  },
 }
