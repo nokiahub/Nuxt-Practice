@@ -182,10 +182,11 @@ export const state = () => ({
 
 export const getters = {
   getProductById: (state) => (id) => {
+    const randomId = Math.floor(Math.random() * (24 - 1)) + 1;
 
-    // const randomId = Math.floor(Math.random() * (24 - 1)) + 1;
-    return state.products.find(product => product.id === Number(id))
-
-    // return randomId
+    setTimeout(() => {
+      return randomId
+    }, 0)
+    // return state.products.find(product => product.id === Number(id))
   }
 };
