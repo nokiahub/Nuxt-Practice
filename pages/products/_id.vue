@@ -43,6 +43,9 @@ export default {
     product() {
       return this.$store.getters.getProductById(this.$route.params.id);
     }
+  },
+  created() {
+    console.log(this.product)
   }
 };
 </script>
